@@ -3,13 +3,7 @@
 import { useRef, useState, useCallback, useEffect } from "react";
 import dynamic from "next/dynamic";
 import { AnimatePresence } from "framer-motion";
-import {
-  Plus,
-  RotateCw,
-  Save,
-  FileJson,
-  Settings2,
-} from "lucide-react";
+import { Plus, RotateCw, Save, FileJson, Settings2 } from "lucide-react";
 import { Header, AdvancedSettingsPanel } from "@/components/Header";
 import { WheelCard, type WheelCardHandle } from "@/components/WheelCard";
 import { CharacterSheet } from "@/components/CharacterSheet";
@@ -27,7 +21,10 @@ import {
 } from "@/components/ui/select";
 import { Badge } from "@/components/ui/badge";
 import { useWheelStore } from "@/store/wheelStore";
-import { useKeyboardShortcuts, useWindowSize } from "@/hooks/useKeyboardShortcuts";
+import {
+  useKeyboardShortcuts,
+  useWindowSize,
+} from "@/hooks/useKeyboardShortcuts";
 import { PRESETS } from "@/lib/presets";
 import { MAX_WHEELS } from "@/lib/constants";
 
@@ -73,7 +70,7 @@ export function WheelApp() {
         wheelRefs.current.delete(id);
       }
     },
-    []
+    [],
   );
 
   const spinWheel = useCallback(async (wheelId: string) => {
@@ -144,7 +141,7 @@ export function WheelApp() {
         }
       }
     },
-    [addToHistory]
+    [addToHistory],
   );
 
   const isSpinningAny = spinningWheelIds.length > 0;
@@ -161,7 +158,7 @@ export function WheelApp() {
         />
       )}
 
-      <Header />
+      {/* <Header /> */}
 
       <main className="container mx-auto px-4 py-6 space-y-6">
         {/* Toolbar */}
@@ -195,7 +192,9 @@ export function WheelApp() {
           </Badge>
 
           {saveMessage && (
-            <Badge variant={saveMessage.includes("Maximum") ? "default" : "success"}>
+            <Badge
+              variant={saveMessage.includes("Maximum") ? "default" : "success"}
+            >
               {saveMessage}
             </Badge>
           )}
@@ -223,10 +222,7 @@ export function WheelApp() {
               <Save className="h-4 w-4" />
               Save
             </Button>
-            <Button
-              variant="outline"
-              onClick={() => setImportExportOpen(true)}
-            >
+            <Button variant="outline" onClick={() => setImportExportOpen(true)}>
               <FileJson className="h-4 w-4" />
               Import/Export
             </Button>
