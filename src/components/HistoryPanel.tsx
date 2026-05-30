@@ -14,7 +14,7 @@ export function HistoryPanel() {
     <Card>
       <CardHeader className="flex flex-row items-center justify-between pb-2">
         <CardTitle className="text-base flex items-center gap-2">
-          <History className="h-4 w-4 text-indigo-400" />
+          <History className="h-4 w-4 text-accent" />
           Roll History
         </CardTitle>
         <Button variant="ghost" size="sm" onClick={clearHistory}>
@@ -26,15 +26,15 @@ export function HistoryPanel() {
         {history.map((roll) => (
           <div
             key={roll.id}
-            className="rounded-lg bg-white/5 px-3 py-2 text-xs border border-white/5"
+            className="rounded-lg bg-foreground/5 px-3 py-2 text-xs border border-foreground/5"
           >
-            <span className="text-white/40 block mb-1">
+            <span className="text-foreground/40 block mb-1">
               {new Date(roll.timestamp).toLocaleString()}
             </span>
             <div className="flex flex-wrap gap-x-3 gap-y-0.5">
               {roll.results.map((r) => (
-                <span key={`${roll.id}-${r.wheelId}`} className="text-white/80">
-                  <span className="text-white/50">{r.wheelTitle}:</span>{" "}
+                <span key={`${roll.id}-${r.wheelId}`} className="text-foreground/80">
+                  <span className="text-foreground/50">{r.wheelTitle}:</span>{" "}
                   {r.entry.label}
                 </span>
               ))}

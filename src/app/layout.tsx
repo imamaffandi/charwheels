@@ -13,8 +13,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Wheel of Fortune — Character Builder",
-  description: "Build characters with weighted spinning wheels. Up to 10 independent wheels with local storage persistence.",
+  title: "Solomon's Wheel of Fate",
+  description:
+    "Build characters with weighted spinning wheels. Up to 10 independent wheels with local storage persistence.",
 };
 
 export default function RootLayout({
@@ -23,7 +24,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${geistSans.variable} ${geistMono.variable} dark`}>
+    <html
+      lang="en"
+      className={`${geistSans.variable} ${geistMono.variable} dark`}
+    >
       <body className="min-h-screen antialiased">{children}</body>
     </html>
   );

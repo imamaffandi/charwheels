@@ -147,7 +147,7 @@ export function WheelApp() {
   const isSpinningAny = spinningWheelIds.length > 0;
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-zinc-950 via-indigo-950/40 to-zinc-950">
+    <div className="min-h-screen bg-background">
       {showConfetti && (
         <Confetti
           width={windowSize.width}
@@ -162,7 +162,7 @@ export function WheelApp() {
 
       <main className="container mx-auto px-4 py-6 space-y-6">
         {/* Toolbar */}
-        <div className="flex flex-wrap items-center gap-3 rounded-2xl border border-white/10 bg-white/5 backdrop-blur-xl p-4">
+        <div className="flex flex-wrap items-center gap-3 rounded-2xl border border-foreground/10 bg-foreground/5 backdrop-blur-xl p-4">
           <Select onValueChange={loadPreset}>
             <SelectTrigger className="w-[220px]">
               <SelectValue placeholder="Load Preset" />
@@ -257,7 +257,7 @@ export function WheelApp() {
         <div className="grid gap-4 lg:grid-cols-2">
           {advancedMode && (
             <div className="space-y-2">
-              <div className="flex items-center gap-2 text-sm text-white/50">
+              <div className="flex items-center gap-2 text-sm text-foreground/50">
                 <Settings2 className="h-4 w-4" />
                 Advanced Settings
               </div>
@@ -268,7 +268,7 @@ export function WheelApp() {
         </div>
 
         {/* Keyboard shortcuts hint */}
-        <p className="text-center text-xs text-white/30 pb-4">
+        <p className="text-center text-xs text-foreground/30 pb-4">
           Shortcuts: Space = spin selected · Shift+Space = spin all · Ctrl+S =
           save · Ctrl+N = new wheel
         </p>

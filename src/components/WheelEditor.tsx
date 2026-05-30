@@ -12,7 +12,7 @@ interface WheelEditorProps {
 export function WheelEditor({ rawInput, onChange, disabled }: WheelEditorProps) {
   return (
     <div className="space-y-2">
-      <Label htmlFor="wheel-input" className="text-xs text-white/50">
+      <Label htmlFor="wheel-input" className="text-xs text-foreground/50">
         Entries (weight,label or label)
       </Label>
       <Textarea

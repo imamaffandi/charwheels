@@ -1,4 +1,4 @@
-export const MAX_WHEELS = 10;
+export const MAX_WHEELS = 20;
 export const MAX_HISTORY = 50;
 export const STORAGE_KEY = "wheel-of-fortune-state";
 export const DEFAULT_SPIN_DURATION = 4000;

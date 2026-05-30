@@ -12,7 +12,7 @@ export function ProbabilityViewer({ entries }: ProbabilityViewerProps) {
 
   if (probabilities.length === 0) {
     return (
-      <p className="text-xs text-white/40 italic">No entries to analyze</p>
+      <p className="text-xs text-foreground/40 italic">No entries to analyze</p>
     );
   }
 
@@ -21,14 +21,14 @@ export function ProbabilityViewer({ entries }: ProbabilityViewerProps) {
       {probabilities.map((item) => (
         <div key={item.label} className="space-y-0.5">
           <div className="flex justify-between text-xs">
-            <span className="text-white/80 truncate mr-2">{item.label}</span>
-            <span className="text-indigo-300 font-mono shrink-0">
+            <span className="text-foreground/80 truncate mr-2">{item.label}</span>
+            <span className="text-accent font-mono shrink-0">
               {item.probability.toFixed(1)}%
             </span>
           </div>
-          <div className="h-1.5 rounded-full bg-white/10 overflow-hidden">
+          <div className="h-1.5 rounded-full bg-foreground/10 overflow-hidden">
             <div
-              className="h-full rounded-full bg-gradient-to-r from-indigo-500 to-purple-500 transition-all duration-300"
+              className="h-full rounded-full bg-gradient-to-r from-accent to-accent/70 transition-all duration-300"
               style={{ width: `${item.probability}%` }}
             />
           </div>

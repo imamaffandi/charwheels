@@ -146,8 +146,8 @@ export const WheelCard = forwardRef<WheelCardHandle, WheelCardProps>(
         <Card
           className={`transition-all duration-200 ${
             isSelected
-              ? "ring-2 ring-indigo-500/50 border-indigo-500/30"
-              : "hover:border-white/20"
+              ? "ring-2 ring-accent/50 border-accent/30"
+              : "hover:border-foreground/20"
           } ${wheel.locked ? "opacity-80" : ""}`}
           onClick={onSelect}
           role="article"
@@ -155,7 +155,7 @@ export const WheelCard = forwardRef<WheelCardHandle, WheelCardProps>(
         >
           <CardHeader className="pb-1">
             <div className="flex items-center gap-2">
-              <GripVertical className="h-4 w-4 text-white/30 shrink-0 cursor-grab" />
+              <GripVertical className="h-4 w-4 text-foreground/30 shrink-0 cursor-grab" />
               <Input
                 value={wheel.title}
                 onChange={(e) => renameWheel(wheel.id, e.target.value)}
@@ -221,8 +221,8 @@ export const WheelCard = forwardRef<WheelCardHandle, WheelCardProps>(
             />
 
             {showAdvanced && settings.showWeightVisualization && (
-              <div className="rounded-lg bg-white/5 p-3 border border-white/5">
-                <p className="text-xs text-white/50 mb-2 font-medium">
+              <div className="rounded-lg bg-foreground/5 p-3 border border-foreground/5">
+                <p className="text-xs text-foreground/50 mb-2 font-medium">
                   Probabilities
                 </p>
                 <ProbabilityViewer entries={wheel.entries} />

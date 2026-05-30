@@ -72,50 +72,128 @@ export const PRESETS: Preset[] = [
     ],
   },
   {
-    id: "psychological",
-    name: "Psychological Drama",
+    id: "dnd",
+    name: "D&D Character Builder",
     wheels: [
       {
-        title: "Core Wound",
-        rawInput: `20,Abandonment
-20,Betrayal
-15,Neglect
-15,Rejection
-15,Loss
-15,Injustice`,
+        title: "Race",
+        rawInput: `50,Human
+  40,Dwarf
+  40,Elf
+  35,Halfling
+  30,Gnome
+  25,Half-Elf
+  20,Half-Orc
+  15,Tiefling
+  10,Dragonborn`,
       },
       {
-        title: "Defense Mechanism",
-        rawInput: `25,Denial
-20,Projection
-20,Intellectualization
-15,Humor
-10,Withdrawal
-10,Aggression`,
+        title: "Class",
+        rawInput: `40,Fighter
+  35,Rogue
+  35,Wizard
+  30,Cleric
+  30,Ranger
+  25,Barbarian
+  25,Bard
+  20,Druid
+  20,Monk
+  20,Paladin
+  15,Sorcerer
+  15,Warlock`,
       },
       {
-        title: "Desire",
-        rawInput: `20,Love
-20,Power
-15,Freedom
-15,Recognition
-15,Justice
-15,Peace`,
+        title: "Background",
+        rawInput: `50,Folk Hero
+  45,Soldier
+  40,Criminal
+  40,Sage
+  35,Acolyte
+  35,Charlatan
+  30,Entertainer
+  30,Guild Artisan
+  25,Hermit
+  25,Noble
+  20,Outlander
+  20,Urchin`,
       },
       {
-        title: "Fear",
-        rawInput: `25,Being Alone
-20,Failure
-20,Intimacy
-15,Loss of Control
-10,Death
-10,Exposure`,
+        title: "Alignment",
+        rawInput: `40,Neutral Good
+  35,Chaotic Good
+  35,Lawful Good
+  30,True Neutral
+  25,Chaotic Neutral
+  25,Lawful Neutral
+  20,Neutral Evil
+  15,Chaotic Evil
+  15,Lawful Evil`,
+      },
+      {
+        title: "Strength",
+        rawInput: `50,8
+  40,10
+  30,12
+  25,14
+  20,16
+  15,18
+  10,20`,
+      },
+      {
+        title: "Dexterity",
+        rawInput: `50,8
+  40,10
+  30,12
+  25,14
+  20,16
+  15,18
+  10,20`,
+      },
+      {
+        title: "Constitution",
+        rawInput: `50,8
+  40,10
+  30,12
+  25,14
+  20,16
+  15,18
+  10,20`,
+      },
+      {
+        title: "Intelligence",
+        rawInput: `50,8
+  40,10
+  30,12
+  25,14
+  20,16
+  15,18
+  10,20`,
+      },
+      {
+        title: "Wisdom",
+        rawInput: `50,8
+  40,10
+  30,12
+  25,14
+  20,16
+  15,18
+  10,20`,
+      },
+      {
+        title: "Charisma",
+        rawInput: `50,8
+  40,10
+  30,12
+  25,14
+  20,16
+  15,18
+  10,20`,
       },
     ],
   },
   {
-    id: "dnd",
-    name: "D&D Character",
+    id: "Ultimate",
+    name: "Ultimate Character Builder",
     wheels: [
       {
         title: "Class",
@@ -164,35 +242,89 @@ export const PRESETS: Preset[] = [
 10, Neutral Evil
 8, Chaotic Evil`,
       },
-    ],
-  },
-  {
-    id: "team",
-    name: "Random Team Generator",
-    wheels: [
       {
-        title: "Role",
-        rawInput: `20, Leader
-20, Strategist
-20, Support
-20, Specialist
-20, Wildcard`,
+        title: "Strength",
+        rawInput: `30,Peak Human
+25,Trained
+20,Enhanced
+15,Titan
+10,Demigod`,
       },
       {
-        title: "Personality",
-        rawInput: `20, Bold
-20, Cautious
-20, Creative
-20, Analytical
-20, Empathetic`,
+        title: "Stamina",
+        rawInput: `25,Average
+25,Enduring
+20,Ironblood
+15,Unyielding
+15,Regenerative`,
       },
       {
-        title: "Skill Focus",
-        rawInput: `25, Combat
-25, Tech
-20, Social
-15, Stealth
-15, Magic`,
+        title: "Speed",
+        rawInput: `30,Normal
+25,Swift
+20,Blitz
+15,Phantom
+10,Riftwalker`,
+      },
+      {
+        title: "Battle IQ",
+        rawInput: `25,Instinctive
+25,Tactical
+20,Strategist
+15,Genius
+15,Oracle`,
+      },
+      {
+        title: "Weapon",
+        rawInput: `50,Dagger
+40,Short Sword
+25,Spear
+25,Bow
+20,Twin Blades
+20,War Axe
+15,Greatsword
+10,Scythe
+10,Arcane Staff
+5,Relic Weapon`,
+      },
+      {
+        title: "Weapon Mastery",
+        rawInput: `50,Novice
+40,Apprentice
+25,Skilled
+25,Veteran
+20,Expert
+20,Elite
+15,Master
+10,Grandmaster
+10,Transcendent
+5,Mythic`,
+      },
+      {
+        title: "Unique Skill",
+        rawInput: `50,Berserker Rage
+40,Shadow Step
+25,Blood Pact
+25,Future Sight
+20,Soul Drain
+20,Beast Awakening
+15,Void Manipulation
+10,Time Fracture
+10,Reality Rewrite
+5,Absolute Dominion`,
+      },
+      {
+        title: "Weakness",
+        rawInput: `50,Overconfidence
+40,Fragile Mind
+25,Slow Recovery
+25,Mana Instability
+20,Rage Control
+20,Greed
+15,Fear of Isolation
+10,Power Corruption
+10,Cursed Fate
+5,Existence Decay`,
       },
     ],
   },

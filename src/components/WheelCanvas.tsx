@@ -8,13 +8,15 @@ import {
   forwardRef,
 } from "react";
 import type { WheelEntry } from "@/types";
-import { computeSegments, pickSpinResult, easeOutCubic } from "@/lib/wheelGeometry";
+import {
+  computeSegments,
+  pickSpinResult,
+  easeOutCubic,
+} from "@/lib/wheelGeometry";
 import { WHEEL_COLORS } from "@/lib/constants";
 
 export interface WheelCanvasHandle {
-  spin: (
-    onComplete: (entry: WheelEntry, segmentIndex: number) => void
-  ) => void;
+  spin: (onComplete: (entry: WheelEntry, segmentIndex: number) => void) => void;
   isSpinning: () => boolean;
 }
 
@@ -33,7 +35,7 @@ function drawWheel(
   rotation: number,
   size: number,
   showColors: boolean,
-  highlightIndex: number
+  highlightIndex: number,
 ) {
   const center = size / 2;
   const radius = center - 8;
@@ -46,7 +48,7 @@ function drawWheel(
 
   segments.forEach((seg, i) => {
     const color = showColors
-      ? seg.entry.color ?? WHEEL_COLORS[i % WHEEL_COLORS.length]
+      ? (seg.entry.color ?? WHEEL_COLORS[i % WHEEL_COLORS.length])
       : `hsl(${(i * 360) / segments.length}, 65%, 50%)`;
 
     ctx.beginPath();
@@ -94,8 +96,8 @@ function drawWheel(
 
   ctx.beginPath();
   ctx.moveTo(center, 4);
-  ctx.lineTo(center - 10, 22);
-  ctx.lineTo(center + 10, 22);
+  ctx.lineTo(center - 10, -22);
+  ctx.lineTo(center + 10, -22);
   ctx.closePath();
   ctx.fillStyle = "#f43f5e";
   ctx.fill();
@@ -114,7 +116,7 @@ export const WheelCanvas = forwardRef<WheelCanvasHandle, WheelCanvasProps>(
       highlightIndex = -1,
       onSpinStart,
     },
-    ref
+    ref,
   ) {
     const canvasRef = useRef<HTMLCanvasElement>(null);
     const rotationRef = useRef(0);
@@ -145,7 +147,7 @@ export const WheelCanvas = forwardRef<WheelCanvasHandle, WheelCanvasProps>(
         rotationRef.current,
         size,
         showColors,
-        highlightRef.current
+        highlightRef.current,
       );
     }, [entries, size, showColors]);
 
@@ -218,5 +220,5 @@ export const WheelCanvas = forwardRef<WheelCanvasHandle, WheelCanvasProps>(
         role="img"
       />
     );
-  }
+  },
 );

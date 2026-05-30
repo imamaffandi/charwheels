@@ -85,16 +85,16 @@ export function AdvancedSettingsPanel() {
 
 export function Header() {
   return (
-    <header className="border-b border-white/10 bg-white/5 backdrop-blur-xl sticky top-0 z-40">
+    <header className="border-b border-foreground/10 bg-foreground/5 backdrop-blur-xl sticky top-0 z-40">
       <div className="container mx-auto px-4 py-4 flex items-center gap-3">
-        <div className="flex items-center justify-center h-10 w-10 rounded-xl bg-gradient-to-br from-indigo-500 to-purple-600 shadow-lg shadow-indigo-500/30">
-          <Sparkles className="h-5 w-5 text-white" />
+        <div className="flex items-center justify-center h-10 w-10 rounded-xl bg-gradient-to-br from-accent to-accent/70 shadow-lg shadow-accent/30">
+          <Sparkles className="h-5 w-5 text-foreground" />
         </div>
         <div>
-          <h1 className="text-xl font-bold text-white tracking-tight">
+          <h1 className="text-xl font-bold text-foreground tracking-tight">
             Wheel of Fortune
           </h1>
-          <p className="text-xs text-white/50">Character Builder</p>
+          <p className="text-xs text-foreground/50">Character Builder</p>
         </div>
       </div>
     </header>
