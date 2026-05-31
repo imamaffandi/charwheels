@@ -197,82 +197,68 @@ export const PRESETS: Preset[] = [
     wheels: [
       {
         title: "Class",
-        rawInput: `15, Fighter
-15, Wizard
-12, Rogue
-12, Cleric
-10, Ranger
-10, Paladin
-10, Barbarian
-8, Bard
-8, Druid`,
+        rawInput: `15,Fighter
+15,Wizard
+12,Rogue
+12,Cleric
+10,Ranger
+8,Paladin
+8,Barbarian`,
       },
       {
         title: "Race",
-        rawInput: `20, Human
-18, Elf
-15, Dwarf
-12, Halfling
-10, Dragonborn
-10, Tiefling
-8, Gnome
-7, Half-Elf`,
-      },
-      {
-        title: "Background",
-        rawInput: `15, Soldier
-15, Sage
-12, Criminal
-12, Noble
-10, Folk Hero
-10, Acolyte
-10, Hermit
-8, Entertainer
-8, Outlander`,
+        rawInput: `20,Human
+18,Elf
+15,Dwarf
+12,Halfling
+10,Tiefling
+8,Gnome
+7,Half-Elf
+5,Dragonborn`,
       },
       {
         title: "Alignment",
-        rawInput: `12, Lawful Good
-12, Neutral Good
-12, Chaotic Good
-12, Lawful Neutral
-12, True Neutral
-12, Chaotic Neutral
-10, Lawful Evil
-10, Neutral Evil
-8, Chaotic Evil`,
+        rawInput: `Lawful Good
+Neutral Good
+Chaotic Good
+Lawful Neutral
+True Neutral
+Chaotic Neutral
+Lawful Evil
+Neutral Evil
+Chaotic Evil`,
       },
       {
         title: "Strength",
-        rawInput: `30,Peak Human
+        rawInput: `35,Peak Human
 25,Trained
-20,Enhanced
-15,Titan
-10,Demigod`,
+18,Enhanced
+8,Titan
+2,Demigod`,
       },
       {
         title: "Stamina",
-        rawInput: `25,Average
+        rawInput: `35,Average
 25,Enduring
 20,Ironblood
-15,Unyielding
-15,Regenerative`,
+8,Unyielding
+2,Regenerative`,
       },
       {
         title: "Speed",
-        rawInput: `30,Normal
+        rawInput: `35,Normal
 25,Swift
-20,Blitz
-15,Phantom
-10,Riftwalker`,
+18,Blitz
+8,Phantom
+2,Riftwalker`,
       },
       {
         title: "Battle IQ",
-        rawInput: `25,Instinctive
+        rawInput: `35,Instinctive
 25,Tactical
-20,Strategist
-15,Genius
-15,Oracle`,
+18,Strategist
+8,Genius
+2,Oracle`,
       },
       {
         title: "Weapon",
@@ -291,40 +277,40 @@ export const PRESETS: Preset[] = [
         title: "Weapon Mastery",
         rawInput: `50,Novice
 40,Apprentice
-25,Skilled
-25,Veteran
-20,Expert
-20,Elite
-15,Master
-10,Grandmaster
-10,Transcendent
-5,Mythic`,
+30,Skilled
+20,Veteran
+12,Expert
+8,Elite
+5,Master
+3,Grandmaster
+1,Transcendent
+0.25,Mythic`,
       },
       {
         title: "Unique Skill",
         rawInput: `50,Berserker Rage
 40,Shadow Step
-25,Blood Pact
+30,Blood Pact
 25,Future Sight
 20,Soul Drain
-20,Beast Awakening
-15,Void Manipulation
-10,Time Fracture
-10,Reality Rewrite
-5,Absolute Dominion`,
+15,Beast Awakening
+8,Void Manipulation
+3,Time Fracture
+1,Reality Rewrite
+0.1,Absolute Dominion`,
       },
       {
         title: "Weakness",
         rawInput: `50,Overconfidence
 40,Fragile Mind
-25,Slow Recovery
+30,Slow Recovery
 25,Mana Instability
 20,Rage Control
-20,Greed
-15,Fear of Isolation
-10,Power Corruption
-10,Cursed Fate
-5,Existence Decay`,
+15,Greed
+8,Fear of Isolation
+3,Power Corruption
+1,Cursed Fate
+0.1,Existence Decay`,
       },
     ],
   },
